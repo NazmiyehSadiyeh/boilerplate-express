@@ -48,4 +48,11 @@ app.get('/name', (req, res) => {
   res.json({ name: `${first} ${last}`.trim() });
 });
 
+app.post("/name", (req, res) => {
+  const firstName = req.body.first;
+  const lastName = req.body.last;
+  res.json({ name: `${firstName} ${lastName}` });
+});
+
+
 module.exports = app;
